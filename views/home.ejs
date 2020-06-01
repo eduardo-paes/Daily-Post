@@ -1,0 +1,11 @@
+<%- include("partials/header"); -%>
+
+    <% postContent.forEach(post => { %>
+        <h1><%= post.title %></h1>
+        <p>
+            <%= textTruncate(post.body) %>
+            <a href="/post/<%=realign(post.title)%>">Read more.</a>
+        </p>
+    <% }); %>
+
+<%- include("partials/footer"); -%>
